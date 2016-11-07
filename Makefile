@@ -3,10 +3,10 @@ INCFOLDER := include/
 SRCFOLDER := source/
 OBJFOLDER := obj/
 
-CC := gcc
-CFLAGS := -Wall -ansi
+CC := g++
+CFLAGS := -Wall -ansi -std=c++11
 
-SRCFILES := $(wildcard source/*.c)
+SRCFILES := $(wildcard source/*.cpp)
 
 all: $(SRCFILES:source/%.cpp=obj/%.o)
 	$(CC) $(CFLAGS) obj/*.o -o bin/finalBinary
@@ -20,5 +20,5 @@ clean:
 	rm -rf bin/*
 
 run:
-		cd bin
-		./finalBinary
+	cd bin
+	./finalBinary
