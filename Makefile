@@ -4,7 +4,7 @@ SRCFOLDER := source/
 OBJFOLDER := obj/
 
 CC := g++
-CFLAGS := -Wall -ansi -std=c++11
+CFLAGS := -Wall -ansi -std=c++0x -Wextra -pedantic
 
 SRCFILES := $(wildcard source/*.cpp)
 

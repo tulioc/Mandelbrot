@@ -1,8 +1,8 @@
 #include "../include/Bitmap.hpp"
-
+#define COLORS_RGB 3
 namespace caveofprogramming {
 
-Bitmap::Bitmap(int width, int height): m_width(width), m_height(height) {
+Bitmap::Bitmap(int width, int height): m_width(width), m_height(height), m_pixels(new uint8_t[width*height*COLORS_RGB]) {
 
 }
 
